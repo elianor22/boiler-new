@@ -60,5 +60,6 @@ export default {
       },
     },
   },
-  plugins: [twAnimated],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [twAnimated, require('tailwindcss-animate')],
 } satisfies Config;
