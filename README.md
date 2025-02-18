@@ -21,7 +21,7 @@ pnpm db:generate
 
 pnpm db:migrate
 ```
-# Example api response 
+### Example api response 
 ```bash
 localhost:3000/api/users
 ```
