@@ -6,22 +6,29 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   {
-    title: 'Profile',
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'Product',
     children: [
-      { title: 'Tentang Kami', href: '/pofile/about' },
-      { title: 'Visi Dan Misi', href: '/pofile/vision' },
+      {
+        title: 'Product 1',
+        href: '/products',
+      },
+      {
+        title: 'Partners',
+        href: '/partners',
+      },
     ],
   },
   {
-    title: 'Layanan',
-    children: [{ title: 'Layanan User', href: '/services/user-services' }],
+    title: 'Blog',
+    href: '/blog',
   },
   {
-    title: 'Karir',
-    href: '/career',
-  },
-  {
-    title: 'Tentang',
+    title: 'About',
     href: '/about',
   },
+  { title: 'Not Found', href: '/not-found' },
 ];

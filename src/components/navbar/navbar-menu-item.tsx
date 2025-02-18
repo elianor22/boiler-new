@@ -14,13 +14,7 @@ interface NavbarMenuItemProps {
 
 const NavbarMenuItem = ({ menu, index }: NavbarMenuItemProps) => (
   <NavigationMenuItem data-testid={`nav_menu_item_${index}`} key={index}>
-    <NavigationMenuLink
-      asChild
-      className={cn(
-        navigationMenuTriggerStyle(),
-        'bg-transparent font-bold uppercase text-white hover:bg-transparent',
-      )}
-    >
+    <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle())}>
       <NavbarLinkItem
         href={menu.href ?? '#'}
         data-testid={`nav_menu_link_${index}`}

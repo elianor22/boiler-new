@@ -16,11 +16,7 @@ const NavbarLinkItem: FC<INavbarLinkItem> = ({
   ...props
 }) => {
   return (
-    <Link
-      data-testid="navbar_link_item"
-      className={cn(className, 'hover:text-green-300')}
-      {...props}
-    >
+    <Link data-testid="navbar_link_item" className={cn(className)} {...props}>
       {children}
     </Link>
   );

@@ -1,5 +1,7 @@
 'use client';
 
+import { Aperture } from 'lucide-react';
+
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -7,6 +9,7 @@ import {
 import { NAV_ITEMS } from '@/contants/menu-items';
 import NavbarSubmenuItem from './navbar-submenu-item';
 import NavbarMenuItem from './navbar-menu-item';
+import { Button } from '../ui/button';
 
 const Navbar = () => {
   function onNavChange() {
@@ -36,8 +39,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className="container relative mx-auto flex justify-center">
-      <div className="justify-center rounded-xl bg-primary py-4">
+    <div className="container relative mx-auto flex items-center justify-between">
+      <Aperture />
+      <div className="justify-center rounded-xl py-4">
         <NavigationMenu onValueChange={onNavChange}>
           <NavigationMenuList data-testid="nav_list">
             {NAV_ITEMS.map((menu, index: number) =>
@@ -50,6 +54,7 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
+      <Button>Contact Us</Button>
     </div>
   );
 };
