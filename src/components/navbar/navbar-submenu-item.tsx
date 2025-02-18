@@ -23,11 +23,11 @@ const NavbarSubmenuItem = ({ menu, index }: NavbarSubmenuItemProps) => (
   >
     <NavigationMenuTrigger
       data-testid={`nav_submenu_trigger_${index}`}
-      className="submenu-trigger hover:bg-transparant focus:bg-transparant bg-transparent font-bold uppercase text-white hover:text-green-300 focus:outline-2 data-[active]:bg-transparent data-[state=open]:bg-transparent"
+      className="submenu-trigger"
     >
       {menu.title}
     </NavigationMenuTrigger>
-    <NavigationMenuContent className="w-full">
+    <NavigationMenuContent className="">
       <NavigationMenuIndicator />
       {menu.children?.map((child, childIndex) => (
         <NavigationMenuLink
@@ -38,6 +38,7 @@ const NavbarSubmenuItem = ({ menu, index }: NavbarSubmenuItemProps) => (
           <NavbarLinkItem
             href={child.href as string}
             data-testid={`nav_submenu_link_${index}_${childIndex}`}
+            className="w-full whitespace-nowrap"
           >
             {child.title}
           </NavbarLinkItem>

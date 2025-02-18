@@ -9,7 +9,11 @@ const BaseLayout = ({
   children: ReactNode;
   className?: string;
 }) => {
-  return <div className={cn('container mx-auto', className)}>{children}</div>;
+  return (
+    <div className={cn('container mx-auto flex flex-1 flex-col', className)}>
+      {children}
+    </div>
+  );
 };
 
 export default BaseLayout;
